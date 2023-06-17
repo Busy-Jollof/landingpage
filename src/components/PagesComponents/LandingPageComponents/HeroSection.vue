@@ -86,7 +86,10 @@ export default {
       padding: 12rem 6rem;
     }
     @include respond(phone-x-small) {
-      padding: 12rem 4rem;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
     &__header {
       display: flex;
@@ -141,7 +144,7 @@ export default {
         }
         @include respond(phone-x-small) {
           font-size: 2.2rem;
-          line-height: 2.6rem;
+          line-height: 5rem;
         }
       }
       p {
@@ -153,8 +156,8 @@ export default {
         margin-top: 1rem;
         @include respond(phone-x-small) {
           font-size: 1.8rem;
-          line-height: 2.6rem;
-          margin-top: 3rem;
+          line-height: 3rem;
+          margin-top: 1rem;
         }
       }
     }

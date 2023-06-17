@@ -19,9 +19,29 @@
               with intelligent AI designed to find you the right meals.
             </p>
             <div class="about-section__icons">
-              <a><img src="@/assets/icons/insta-logo.svg" alt="Insta" /></a>
-              <a><img src="@/assets/icons/fb-logo.svg" alt="Facebook" /></a>
-              <a><img src="@/assets/icons/twiter-logo.svg" alt="Twiter" /></a>
+              <a
+                href="https://www.instagram.com/busyjollof"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="@/assets/icons/insta-logo.svg" alt="Facebook" />
+              </a>
+
+              <a
+                href="https://www.twitter.com/busyjollof"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="@/assets/icons/twiter-logo.svg" alt="Twitter" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/busyjollof"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="@/assets/icons/fb-logo.svg" alt="Facebook" />
+              </a>
             </div>
           </div>
         </b-col>
@@ -42,13 +62,19 @@
           <ul class="pages-section">
             <h3 class="pages-section__title">Our Company</h3>
             <li class="pages-section__item">
-              <router-link to="/services-restaurant-owners">For Restaurant Owners</router-link>
+              <router-link to="/services-restaurant-owners"
+                >For Restaurant Owners</router-link
+              >
             </li>
             <li class="pages-section__item">
-              <router-link to="/services-delivery-drivers">For Delivery Drivers</router-link>
+              <router-link to="/services-delivery-drivers"
+                >For Delivery Drivers</router-link
+              >
             </li>
             <li class="pages-section__item">
-              <router-link to="/services-for-everyone">For Everyone</router-link>
+              <router-link to="/services-for-everyone"
+                >For Everyone</router-link
+              >
             </li>
             <li class="pages-section__item">
               <router-link to="/FAQ">FAQ</router-link>
@@ -62,7 +88,12 @@
               Contact us at info@busyjollof.com or click the button below to
               send us a message
             </p>
-            <button class="information-section__btn" @click="openPage('/contact-us')">Contact us</button>
+            <button
+              class="information-section__btn"
+              @click="openPage('/contact-us')"
+            >
+              Contact us
+            </button>
           </div>
         </b-col>
       </b-row>
@@ -108,13 +139,13 @@ export default {
       isActive: 0,
     };
   },
-  methods: {  
-    ...mapActions('navigation', ['setRoute']),    
+  methods: {
+    ...mapActions("navigation", ["setRoute"]),
     openPage(routePath) {
       this.$router
         .push(routePath)
         .then(() => {
-          this.setRoute(routePath)
+          this.setRoute(routePath);
           window.scrollTo(0, 0);
         })
         .catch(() => {});
@@ -138,7 +169,7 @@ export default {
     padding-bottom: 5.3rem;
     max-width: 140rem;
     margin: auto;
-    
+
     .about-section {
       @include respond(tab-port) {
         margin-bottom: 4rem;
@@ -154,7 +185,7 @@ export default {
           width: 18rem;
         }
         @include respond(phone-x-small) {
-          width: 22rem;
+          width: 20rem;
         }
       }
       &__description {
@@ -167,7 +198,7 @@ export default {
         padding-right: 2rem;
         @include respond(phone-x-small) {
           font-size: 1.8rem;
-          line-height: 2.6rem;
+          line-height: 3rem;
           padding-right: 0;
         }
       }
