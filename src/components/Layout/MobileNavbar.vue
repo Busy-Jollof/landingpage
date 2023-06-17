@@ -3,7 +3,7 @@
     <div class="mobile-navbar__header">
       <div class="mobile-navbar__header--logo">
         <router-link to="/">
-          <img src="@/assets/icons/main-logo.svg" alt="Logo" />
+          <img src="@/assets/icons/bj-logo2.png" alt="Logo" />
         </router-link>
       </div>
       <button class="mobile-navbar__header--humburger" @click="navbarOpen()">
@@ -31,20 +31,24 @@
             </router-link>
           </li>
         </ul>
-        <div class="mobile-navbar__body--card">
+       <!--  <div class="mobile-navbar__body--card">
           <h2>Want to know more?</h2>
           <p>
             Checkout our FAQ page for answers to your our frequently asked
             questions about us
           </p>
-          <button>Get started</button>
-        </div>
+          <button
+          @click="navbarData('/FAQ')"
+          >Get started</button>
+        </div> -->
       </div>
     </Transition>
   </div>
 </template>
 
 <script>
+
+
 export default {
   data() {
     return {
@@ -93,13 +97,20 @@ export default {
       this.openNavbar = false;
     },
   },
+  
   computed: {
     navbarData() {
       return this.openNavbar;
     },
   },
 };
+
+
+
+
 </script>
+
+
 <style lang="scss" scoped>
 .mobile-navbar {
   position: relative;
@@ -131,7 +142,7 @@ export default {
     top: 7.6rem;
     z-index: 3;
     width: 100vw;
-    left: -4rem;
+    left: -2rem;
     padding: 3.4rem 10rem;
     height: 100vh;
     overflow-y: auto;

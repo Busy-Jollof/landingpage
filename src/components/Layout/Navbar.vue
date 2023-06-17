@@ -111,7 +111,7 @@ export default {
     padding: 3.4rem 5rem;
   }
   @include respond(phone-x-small) {
-    padding: 3.4rem 4rem;
+    padding: 2rem;
   }
   &__navbar {
     display: flex;
