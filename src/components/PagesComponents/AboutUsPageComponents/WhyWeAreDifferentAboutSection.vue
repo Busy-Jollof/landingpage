@@ -5,12 +5,23 @@
         Why we are different
       </h1>
       <p class="different-about-section__section--description">
-        Find out what sets us apart from every other food delivery company
+        Find out what sets us apart from every other food delivery companies
       </p>
-      <button class="different-about-section__section--btn">Learn more</button>
+      <button @click="openServices('/services-for-everyone')" class="different-about-section__section--btn">Learn more</button>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    openServices(routeName) {
+      this.$router.push(routeName);
+      window.scrollTo(0,0); 
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .different-about-section {
